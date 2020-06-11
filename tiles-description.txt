@@ -1,0 +1,29 @@
+#1
+ProductName = "1. Resource Groups"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/01-rg/readme.md"
+ShortDescription = "Tile for creation of resource groups for sandbox."
+
+#2
+ProductName = "2. Access Groups and Access Policies"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/02-ag-accesspolicies/readme.md"
+ShortDescription = "Tile for creation of access groups and access policies for sandbox."
+
+#3
+ProductName = "3. Invite Users to IBM Cloud Account"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/03-invite-users/readme.md"
+ShortDescription = "Tile for inviting users to IBM Cloud Account."
+
+#4
+ProductName = "4. Assign Users to Access Groups"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/04-ag-users/readme.md"
+ShortDescription = "Tile for assigning users to access groups of sandbox."
+
+#5
+ProductName = "5. Cloud Managed Services"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/05-cloud-managed-services/readme.md"
+ShortDescription = "Tile for creating cloud managed services."
+
+#6
+ProductName = "6. Enterprise Lite Catalog"
+DocURL = "https://github.ibm.com/gsi-labs/ibm-gsi-sandbox-tiles/blob/master/terraform/06-ibmcloudlite/readme.md"
+ShortDescription = "Tile for creating catalog with services with only lite plans."
