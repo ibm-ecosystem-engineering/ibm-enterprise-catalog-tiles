@@ -1,4 +1,4 @@
-# IBM Cloud GSI Sandbox - Setup utilities as Private Catalog tiles
+# IBM Cloud setup utilities as Private Catalog tiles
 
 IBM Cloud setup utilities helps to create IAM entries and some basic services in IBM cloud account. The Utilities are created as Private Catalog tiles and users can run the tiles to get them created IBM Cloud Account.
 
