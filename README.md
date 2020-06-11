@@ -1,6 +1,6 @@
 # IBM Cloud setup utilities as Private Catalog tiles
 
-IBM Cloud setup utilities helps to create IAM entries and some basic services in IBM cloud account. The Utilities are created as Private Catalog tiles and users can run the tiles to get them created IBM Cloud Account.
+IBM Cloud setup utilities helps to create IAM entries and some basic services in IBM cloud account. The Utilities are created as Private Catalog tiles and users can run the tiles to get them created in IBM Cloud Account.
 
 Here is the complete list of utilities available. 
 
@@ -9,7 +9,7 @@ Here is the complete list of utilities available.
 - [Invite users to IBM Cloud Account](terraform/03-invite-users)  
 - [Assign users to Access Groups](terraform/04-ag-users)  
 - [Binding App ID, Cloudant and Cloud Object Storage services](terraform/05-cloud-managed-services)  
-- [Create IBM Lite Services only](terraform/06-ibmcloudlite)  
+- [Create IBM Lite Services](terraform/06-ibmcloudlite)  
 
 
 Here is the sample private catalog tiles. 
