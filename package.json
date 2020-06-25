@@ -1,0 +1,44 @@
+{
+  "name": "enterprise-sandbox-tiles",
+  "version": "0.0.1",
+  "description": "This repository provides a selection of Private Catalog Tiles for managment of an IBM Cloud Enterprise subscription account",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "./bin/package-yaml.sh",
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "Release ${version}\n[skip ci]"
+    },
+    "github": {
+      "release": true,
+      "assets": [
+        "./dist/100-release.yaml"
+      ]
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "after:bump": "./scripts/build.sh ${version}"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-gsi-ecosystem/enterprise-sandbox-tiles"
+  },
+  "author": "",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/ibm-gsi-ecosystem/enterprise-sandbox-tiles/issues"
+  },
+  "homepage": "https://github.com/ibm-gsi-ecosystem/enterprise-sandbox-tiles#readme",
+  "dependencies": {
+    "release-it": "^13.5.2"
+  }
+}
