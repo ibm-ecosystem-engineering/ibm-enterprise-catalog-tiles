@@ -4,12 +4,12 @@ IBM Cloud setup utilities helps to create IAM entries and some basic services in
 
 Here is the complete list of utilities available. 
 
-- [Resource Group Creation](terraform/100-create-resource-groups)  
-- [Access Groups and Access Policies Creation](terraform/200-create-access-group-policies)  
-- [Invite users to IBM Cloud Account](terraform/300-invite-users)  
-- [Assign users to Access Groups](terraform/400-add-users-to-access-groups)  
-- [Binding App ID, Cloudant and Cloud Object Storage services](terraform/500-cloud-managed-services)  
-- [Create IBM Lite Services](terraform/600-enable-ibm-cloud-lite-catalog)  
+- [Resource Group Creation](tiles/100-create-resource-groups)  
+- [Access Groups and Access Policies Creation](tiles/200-create-access-group-policies)  
+- [Invite users to IBM Cloud Account](tiles/300-invite-users)  
+- [Assign users to Access Groups](tiles/400-add-users-to-access-groups)  
+- [Binding App ID, Cloudant and Cloud Object Storage services](tiles/500-cloud-managed-services)  
+- [Create IBM Lite Services](tiles/600-enable-ibm-cloud-lite-catalog)  
 
 
 Here is the sample private catalog tiles. 

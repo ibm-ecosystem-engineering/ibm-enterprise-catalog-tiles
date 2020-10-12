@@ -1,0 +1,78 @@
+name: Publish assets
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release-installer:
+    runs-on: ubuntu-latest
+
+    env:
+      DIST_DIR: ./dist
+      OFFERINGS: offering-cloudnative-toolkit,offering-sre-tools
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Build tile installer
+        run: |
+          mkdir -p ${{ env.DIST_DIR }}
+          cat ./scripts/master.sh | sed "s/VERSION=latest/VERSION=${{ github.event.release.tag_name }}/g" | sed "s~#GIT_REPO~${{ github.repository }}~g" | sed "s/#OFFERINGS/${{ env.OFFERINGS }}/g" > ${{ env.DIST_DIR }}/create-catalog-offering.sh
+          chmod +x ${{ env.DIST_DIR }}/create-catalog-offering.sh
+
+      - name: Upload tile installer
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist/create-catalog-offering.sh
+          asset_name: create-catalog-offering.sh
+          asset_content_type: application/octet-stream
+
+  release-offerings:
+    runs-on: ubuntu-latest
+
+    env:
+      DIST_DIR: ./dist
+
+    strategy:
+      matrix:
+        offering:
+          - 100-create-resource-groups
+          - 200-create-access-group-polices
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Build offering
+        run: |
+          ./tiles/${{ matrix.offering }}/build.sh ${{ env.DIST_DIR }} ${{ matrix.offering }} ${{ github.event.release.tag_name }} ${{ github.repository }}
+
+      - name: Upload offering json
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist/offering-${{ matrix.offering }}.json
+          asset_name: offering-${{ matrix.offering }}.json
+          asset_content_type: application/json
+
+      - name: Upload offering tar
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist/${{ matrix.offering }}.tar.gz
+          asset_name: ${{ matrix.offering }}.tar.gz
+          asset_content_type: application/gzip
