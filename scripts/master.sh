@@ -7,8 +7,8 @@
 # email  : mjperrin@us.ibm.com, seansund@us.ibm.com
 #
 ###################################################################################
-echo "IBM Cloud Private Catalog Offering Creation!"
-echo "This will create a CNCF DevOps Cloud-Native Toolkit Tile in an existing Catalog"
+echo "IBM Cloud Enterprise Catalog Tiles"
+echo "These Catalog tiles support a number of key SRE tasks for setting up IBM Cloud for managing Cloud-Native development"
 
 # the API_KEY and Catalog Name are required to run this script
 API_KEY="$1"
@@ -95,4 +95,4 @@ IFS=','; for OFFERING in ${OFFERINGS}; do
   CATALOGS=$(eval ${ACURL} -location -request POST "${HOST}/catalogs/${CATALOG_ID}/offerings" -H 'Content-Type: application/json' --data "@offering.json")
 done
 
-echo "Offering Registration Complete ...!"
+echo "Tile Registration Complete ...!"
