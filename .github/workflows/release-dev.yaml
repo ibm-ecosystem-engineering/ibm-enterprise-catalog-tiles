@@ -18,6 +18,7 @@ jobs:
         id: create-release
         with:
           # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
-          config-name: release-drafter.yaml
+          config-name: release-drafter-beta.yaml
+          publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
