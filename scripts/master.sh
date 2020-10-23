@@ -8,7 +8,7 @@
 #
 ###################################################################################
 echo "IBM Cloud Enterprise Catalog Tiles"
-echo "These Catalog tiles support a number of key SRE tasks for setting up IBM Cloud for managing Cloud-Native development"
+echo "These Catalog tiles support a number of key SRE tasks for setting up IBM Cloud Account for managing Cloud-Native development teams"
 
 # the API_KEY and Catalog Name are required to run this script
 API_KEY="$1"
