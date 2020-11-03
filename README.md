@@ -4,10 +4,10 @@ IBM Cloud setup utilities helps to create IAM entries and some basic services in
 
 Here is the complete list of utilities available. 
 
-- [Create Resource Group Creation](tiles/100-create-resource-groups)  
-- [Access Groups and Access Policies Creation](tiles/200-create-access-group-policies)  
-- [Invite users to IBM Cloud Account](tiles/300-invite-users)  
-- [Assign users to Access Groups](tiles/400-add-users-to-access-groups)  
-- [Binding App ID, Cloudant and Cloud Object Storage services](tiles/500-cloud-managed-services)  
-- [Create IBM Lite Services](tiles/600-enable-ibm-cloud-lite-catalog)  
+- [Create Resource Group Creation](tiles/create-resource-groups)  
+- [Access Groups and Access Policies Creation](tiles/create-access-group-policies)  
+- [Invite users to IBM Cloud Account](tiles/invite-users)  
+- [Assign users to Access Groups](tiles/add-users-to-access-groups)  
+- [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)  
+- [Create IBM Lite Services](tiles/enable-catalog-lite-services)  
 

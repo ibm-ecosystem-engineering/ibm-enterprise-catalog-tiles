@@ -1,0 +1,261 @@
+{
+  "label": "300. Invite users to account",
+  "name": "#OFFERING",
+  "offering_icon_url": "https://globalcatalog.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/terraform.svg",
+  "tags": [
+    "terraform",
+    "dev_ops"
+  ],
+  "rating": {},
+  "short_description": "Creates a set of Resource Groups for the managing users and software",
+  "kinds": [
+    {
+      "format_kind": "terraform",
+      "install_kind": "terraform",
+      "target_kind": "terraform",
+      "versions": [
+        {
+          "version": "#VERSION",
+          "catalog_id": "#CATALOG_ID",
+          "repo_url": "https://github.com/#REPO_URL/",
+          "tgz_url": "https://github.com/#REPO_URL/releases/download/#VERSION/#OFFERING.tar.gz",
+          "configuration": [
+            {
+              "key": "cluster_exists",
+              "type": "string",
+              "default_value": "true",
+              "description": "Flag indicating that the cluster already exists (true or false)",
+              "required": false,
+              "hidden": true
+            },
+            {
+              "key": "cluster_type",
+              "type": "string",
+              "default_value": "ocp4",
+              "description": "The type of cluster into which the #OFFERING will be installed (ocp4, ocp3 or kubernetes)",
+              "options": [
+                {"label": "Kubernetes", "value": "kubernetes"},
+                {"label": "OpenShift 3.x", "value": "ocp3"},
+                {"label": "OpenShift 4.x", "value": "ocp4"}
+              ],
+              "required": true,
+              "hidden": false
+            },
+            {
+              "key": "ibmcloud_api_key",
+              "type": "password",
+              "description": "The IBM Cloud API key that has ClusterAdmin access",
+              "required": true,
+              "hidden": false
+            },
+            {
+              "key": "resource_group_name",
+              "type": "string",
+              "description": "Existing resource group that contains the cluster",
+              "required": true,
+              "hidden": false
+            },
+            {
+              "key": "region",
+              "type": "string",
+              "description": "The region where the cluster has been provisioned",
+              "options": [
+                {"label": "us-south", "value": "us-south"},
+                {"label": "us-east", "value": "us-east"},
+                {"label": "eu-de", "value": "eu-de"},
+                {"label": "eu-gb", "value": "eu-gb"},
+                {"label": "au-syd", "value": "au-syd"},
+                {"label": "jp-tok", "value": "jp-tok"}
+              ],
+              "required": true,
+              "hidden": false
+            },
+            {
+              "key": "cluster_name",
+              "type": "string",
+              "description": "The name of the existing cluster",
+              "required": true,
+              "hidden": false
+            },
+            {
+              "key": "vpc_cluster",
+              "type": "string",
+              "description": "Flag indicating that the cluster has been built on VPC infrastructure",
+              "options": [
+                {"label": "True", "value": "true"},
+                {"label": "False", "value": "false"}
+              ],
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_type",
+              "type": "string",
+              "description": "The type of the image registry",
+              "options": [
+                {"label": "IBM Container Registry", "value": "icr"},
+                {"label": "OCP Internal", "value": "ocp"},
+                {"label": "Other", "value": "other"},
+                {"label": "None", "value": "none"}
+              ],
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_namespace",
+              "type": "string",
+              "description": "The namespace of the image registry (used for icr and other registry types)",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_host",
+              "type": "string",
+              "description": "The host of the image registry (used for other registry types)",
+              "default_value": "",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_user",
+              "type": "string",
+              "description": "The user to access the image registry (used for other registry types)",
+              "default_value": "",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_password",
+              "type": "password",
+              "description": "The password to access the image registry (used for other registry types)",
+              "default_value": "",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "registry_url",
+              "type": "string",
+              "description": "The browser url to access the image registry (used for other registry types)",
+              "default_value": "",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "logdna_name",
+              "type": "string",
+              "description": "The name of the existing logdna instance to which the cluster should be connected",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "logdna_region",
+              "type": "string",
+              "description": "The region where the logdna instance has been provisioned. If not provided this will default to cluster region",
+              "options": [
+                {"label": "us-south", "value": "us-south"},
+                {"label": "us-east", "value": "us-east"},
+                {"label": "eu-de", "value": "eu-de"},
+                {"label": "eu-gb", "value": "eu-gb"},
+                {"label": "au-syd", "value": "au-syd"},
+                {"label": "jp-tok", "value": "jp-tok"}
+              ],
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "provision_logdna",
+              "type": "string",
+              "default_value": "false",
+              "description": "Flag indicating that the a logdna instance should be provisioned",
+              "required": false,
+              "hidden": true
+            },
+            {
+              "key": "sysdig_name",
+              "type": "string",
+              "description": "The name of the existing sysdig instance to which the cluster should be connected",
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "sysdig_region",
+              "type": "string",
+              "description": "The region where the sysdig instance will be/has been provisioned. If not provided this will default to the overall region",
+              "options": [
+                {"label": "us-south", "value": "us-south"},
+                {"label": "us-east", "value": "us-east"},
+                {"label": "eu-de", "value": "eu-de"},
+                {"label": "eu-gb", "value": "eu-gb"},
+                {"label": "au-syd", "value": "au-syd"},
+                {"label": "jp-tok", "value": "jp-tok"}
+              ],
+              "required": false,
+              "hidden": false
+            },
+            {
+              "key": "provision_sysdig",
+              "type": "string",
+              "default_value": "false",
+              "description": "Flag indicating that a sysdig instance should be provisioned",
+              "required": false,
+              "hidden": true
+            },
+            {
+              "key": "source_control_type",
+              "type": "string",
+              "default_value": "github",
+              "options": [
+                {"label": "GitHub", "value": "github"},
+                {"label": "Gitlab", "value": "gitlab"},
+                {"label": "None", "value": "none"}
+              ],
+              "description": "The type of source control system to configure in the cluster",
+              "required": false,
+              "hidden": true
+            },
+            {
+              "key": "source_control_url",
+              "type": "string",
+              "default_value": "https://github.com",
+              "description": "The url of source control system to configure in the cluster",
+              "required": false,
+              "hidden": true
+            },
+            {
+              "key": "TF_VERSION",
+              "type": "string",
+              "default_value": "0.12",
+              "description": "The version of terraform that should be used",
+              "required": true,
+              "hidden": false
+            }
+          ],
+          "install": {
+            "instructions": "Some ContentN/A"
+          },
+          "entitlement": {
+            "provider_name": "free",
+            "provider_id": "free"
+          },
+          "install": {
+            "instructions": "N/A"
+          },
+          "licenses": [
+            {
+              "name": "LICENSE",
+              "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+          ],
+          "deprecated": false,
+          "long_description": "#LONG_DESCRIPTION"
+        }
+      ]
+    }
+  ],
+  "catalog_id": "#CATALOG_ID",
+  "hidden": false,
+  "provider": "IBM",
+  "repo_info": {
+    "type": "public_git"
+  }
+}

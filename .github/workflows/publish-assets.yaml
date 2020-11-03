@@ -11,7 +11,7 @@ jobs:
 
     env:
       DIST_DIR: ./dist
-      OFFERINGS: offering-cloudnative-toolkit,offering-sre-tools
+      OFFERINGS: offering-create-resource-groups,offering-create-access-group-polices,offering-invite-users,offering-add-users-to-access-groups,offering-cloud-managed-services,offering-enable-catalog-lite-services
 
     steps:
       - name: Checkout
@@ -44,12 +44,12 @@ jobs:
     strategy:
       matrix:
         offering:
-          - 100-create-resource-groups
-          - 200-create-access-group-polices
-#          - 300-invite-users
-#          - 400-add-users-to-access-groups
-#          - 500-cloud-managed-services
-#          - 600-enable-ibm-cloud-list-catalog
+          - create-resource-groups
+          - create-access-group-polices
+          - invite-users
+          - add-users-to-access-groups
+          - cloud-managed-services
+          - enable-catalog-lite-services
 
     steps:
       - name: Checkout
