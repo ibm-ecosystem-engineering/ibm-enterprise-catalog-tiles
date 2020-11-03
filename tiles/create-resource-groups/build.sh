@@ -40,9 +40,10 @@ mkdir -p "${WORKSPACE_DIR}"
 
 SRC_DIR="."
 
+SRC_DIR=${SCRIPT_DIR}
+
 STAGES_DIRECTORY="terraform"
 
-echo "DIR ${SRC_DIR}/${STAGES_DIRECTORY}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/outputs.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/main.tf" "${WORKSPACE_DIR}"
