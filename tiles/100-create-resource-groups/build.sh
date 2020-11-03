@@ -29,7 +29,7 @@ if [ -z "${VERSION}" ]; then
 fi
 
 if [ -z "${REPO_SLUG}" ]; then
-  REPO_SLUG="ibm-garage-cloud/ibm-garage-iteration-zero"
+  REPO_SLUG="ibm-gsi-ecosystem/ibm-enterprise-catalog-tiles"
 fi
 
 REPO_URL="https://github.com/${REPO_SLUG}"
@@ -38,14 +38,14 @@ WORKSPACE_BASE="./workspace"
 WORKSPACE_DIR="${WORKSPACE_BASE}/${OFFERING_NAME}"
 mkdir -p "${WORKSPACE_DIR}"
 
-SRC_DIR="./terraform"
+SRC_DIR="."
 
-STAGES_DIRECTORY="stages-sre"
+STAGES_DIRECTORY="terraform"
 
+echo "DIR ${SRC_DIR}/${STAGES_DIRECTORY}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
-cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
-cp "${SRC_DIR}"/scripts-workspace/* "${WORKSPACE_DIR}"
-cp README.md "${WORKSPACE_DIR}/SCRIPTS.md"
+cp "${SRC_DIR}/${STAGES_DIRECTORY}/outputs.tf" "${WORKSPACE_DIR}"
+cp "${SRC_DIR}/${STAGES_DIRECTORY}/main.tf" "${WORKSPACE_DIR}"
 cp "${SCRIPT_DIR}/README.md" "${WORKSPACE_DIR}"
 
 echo "  - Creating offering - ${OUTPUT_DIR}/${OFFERING_NAME}.tar.gz"

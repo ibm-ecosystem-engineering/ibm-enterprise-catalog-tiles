@@ -45,7 +45,7 @@ jobs:
       matrix:
         offering:
           - 100-create-resource-groups
-#          - 200-create-access-group-polices
+          - 200-create-access-group-polices
 #          - 300-invite-users
 #          - 400-add-users-to-access-groups
 #          - 500-cloud-managed-services
