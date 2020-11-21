@@ -18,9 +18,9 @@ Following are the default values of resource groups for GSI sandbox. However, us
 - Any number of resource-group names can be provided in the list at once. 
 
 #### Note
-- Resource group's name in the cloud account has to be unique. Hence, providing the names of resource-groups which are already present in the account, would lead to failure during Schematics workspace execution.
+- Resource group's name in the cloud account has to be unique. Hence, providing the names of resource-groups which are already present in the account, would lead to failure during tile workspace execution.
 
 ## 2. Install
 - After setting the parameter, click on **Install** to create the resource-groups. 
-- The Schematics workspace gets created and executed to create the IAM resources. 
+- The Schematics workspace gets created from the private catalog tile and executed to create the IAM resources. 
 - The logs for resource creation can be seen in Schematics workspace.

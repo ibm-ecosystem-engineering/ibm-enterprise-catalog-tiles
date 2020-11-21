@@ -22,8 +22,8 @@ jobs:
       - name: Build tile installer
         run: |
           mkdir -p ${{ env.DIST_DIR }}
-          cat ./scripts/master.sh | sed "s/VERSION=latest/VERSION=${{ github.event.release.tag_name }}/g" | sed "s~#GIT_REPO~${{ github.repository }}~g" | sed "s/#OFFERINGS/${{ env.OFFERINGS }}/g" > ${{ env.DIST_DIR }}/create-catalog-offering.sh
-          chmod +x ${{ env.DIST_DIR }}/create-catalog-offering.sh
+          cat ./scripts/master.sh | sed "s/VERSION=latest/VERSION=${{ github.event.release.tag_name }}/g" | sed "s~#GIT_REPO~${{ github.repository }}~g" | sed "s/#OFFERINGS/${{ env.OFFERINGS }}/g" > ${{ env.DIST_DIR }}/create-enterprize-titles.sh
+          chmod +x ${{ env.DIST_DIR }}/create-enterprise-tiles.sh
 
       - name: Upload tile installer
         uses: actions/upload-release-asset@v1
