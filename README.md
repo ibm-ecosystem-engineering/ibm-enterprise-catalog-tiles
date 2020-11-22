@@ -12,7 +12,7 @@ The following Enterprise tiles are included in this git repository. They complim
   | **Tile**      | **README**                                                       | 
   |---------------|------------------------------------------------------------------|
   | `100`  |  [Create Resource Group Creation](tiles/create-resource-groups) |
-  | `110`  |  [Access Groups and Access Policies Creation](tiles/create-access-group-policies)|
+  | `110`  |  [Access Groups and Access Policies Creation](tiles/create-access-group-polices)|
   | `120`  |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
   | `130`  |  [Assign users to Access Groups](tiles/add-users-to-access-groups)|
   |  `140` |  [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)        |
