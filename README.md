@@ -2,7 +2,7 @@
 
 One of the features of the IBM Cloud Catalog is support for private catalog tiles. These can
 contain custom Terraform definitions that can accelerate SRE teams in the execution of common
-and repetitive tasks. This collection of Enterprise tiles can help speed up repetative tasks. This is the recommended approach for using this asset multiple times.
+and repetitive tasks. This collection of Enterprise tiles can help speed up your IBM Cloud Account configuration ready for Developers, Production applications. 
 These tiles focus on common tasks when preparing an IBM Cloud account for production use. They help create **Resource Groups**, **Access Groups** defined with the correct access policies for general usage and a lot more
 
 ## Enterprise tiles
@@ -11,12 +11,12 @@ The following Enterprise tiles are included in this git repository. They complim
 
   | **Tile**      | **README**                                                       | 
   |---------------|------------------------------------------------------------------|
-    | `100`         |  [Create Resource Group Creation](tiles/create-resource-groups) |
-    | `110`         |  [Access Groups and Access Policies Creation](tiles/create-access-group-policies)|
-    | `120`         |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
-    | `130`         |  [Assign users to Access Groups](tiles/add-users-to-access-groups)     |
-    | `140`         |  [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)        |
-    | `150`         |  [Create IBM Lite Services](tiles/enable-catalog-lite-services) | 
+  | `100`  |  [Create Resource Group Creation](tiles/create-resource-groups) |
+  | `110`  |  [Access Groups and Access Policies Creation](tiles/create-access-group-policies)|
+  | `120`  |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
+  | `130`  |  [Assign users to Access Groups](tiles/add-users-to-access-groups)|
+  |  `140` |  [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)        |
+  | `150`  |  [Create IBM Lite Services](tiles/enable-catalog-lite-services) | 
 
 ## Installation
 
