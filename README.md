@@ -16,7 +16,7 @@ The following Enterprise tiles are included in this git repository. They complim
   | `120`  |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
   | `130`  |  [Assign users to Access Groups](tiles/add-users-to-access-groups)|
   |  `140` |  [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)        |
-  | `150`  |  [Create IBM Lite Services](tiles/enable-catalog-lite-services) | 
+  | `150`  |  [Create Catalog for Lite Services](tiles/enable-catalog-lite-services) | 
 
 ## Installation
 

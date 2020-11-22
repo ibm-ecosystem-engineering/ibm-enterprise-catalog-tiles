@@ -31,8 +31,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dist/create-catalog-offering.sh
-          asset_name: create-catalog-offering.sh
+          asset_path: ./dist/create-enterprise-tiles.sh
+          asset_name: create-enterprise-tiles.sh
           asset_content_type: application/octet-stream
 
   release-offerings:
