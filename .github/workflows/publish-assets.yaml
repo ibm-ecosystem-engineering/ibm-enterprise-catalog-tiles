@@ -22,7 +22,8 @@ jobs:
       - name: Build tile installer
         run: |
           mkdir -p ${{ env.DIST_DIR }}
-          cat ./scripts/master.sh | sed "s/VERSION=latest/VERSION=${{ github.event.release.tag_name }}/g" | sed "s~#GIT_REPO~${{ github.repository }}~g" | sed "s/#OFFERINGS/${{ env.OFFERINGS }}/g" > ${{ env.DIST_DIR }}/create-enterprise-titles.sh
+          cat ./scripts/master.sh | sed "s/VERSION=latest/VERSION=${{ github.event.release.tag_name }}/g" | sed "s~#GIT_REPO~${{ github.repository }}~g" | sed "s/#OFFERINGS/${{ env.OFFERINGS }}/g" > ${{ env.DIST_DIR }}/create-enterprise-tiles.sh
+          cat ${{ env.DIST_DIR }}/create-enterprise-tiles.sh
           chmod +x ${{ env.DIST_DIR }}/create-enterprise-tiles.sh
 
       - name: Upload tile installer
