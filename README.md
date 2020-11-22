@@ -1,4 +1,4 @@
-# IBM Cloud - Enterprise tiles
+# IBM Cloud - Private Catalog Enterprise tiles
 
 One of the features of the IBM Cloud Catalog is support for private catalog tiles. These can
 contain custom Terraform definitions that can accelerate SRE teams in the execution of common
