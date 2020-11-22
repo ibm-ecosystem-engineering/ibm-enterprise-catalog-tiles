@@ -15,7 +15,7 @@ The following Enterprise tiles are included in this git repository. They complim
   | `110`  |  [Access Groups and Access Policies Creation](tiles/create-access-group-polices)|
   | `120`  |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
   | `130`  |  [Assign users to Access Groups](tiles/add-users-to-access-groups)|
-  |  `140` |  [Binding App ID, Cloudant and Cloud Object Storage services](tiles/cloud-managed-services)        |
+  | `140` |   [Create Cloud Managed Services](tiles/cloud-managed-services)        |
   | `150`  |  [Create Catalog for Lite Services](tiles/enable-catalog-lite-services) | 
 
 ## Installation
@@ -47,7 +47,7 @@ Follow the steps below to install the Enterprise tiles in your IBM Cloud Private
 
 2. Run the `create-enterprise-tiles` scripts passing in the API Key and the name of the catalog that you created
     ```shell script
-    ./create-enterprise-tiles.sh {API_KEY} "Team Catalog"
+    ./create-enterprise-tiles.sh {API_KEY} "SRE Catalog"
     ```
 
 ### C. Apply the tile
