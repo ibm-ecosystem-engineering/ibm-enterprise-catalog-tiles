@@ -9,8 +9,8 @@ These tiles focus on common tasks when preparing an IBM Cloud account for produc
 
 The following Enterprise tiles are included in this git repository. They compliment the **Cloud-Native Toolkit** that add a set of DevSecOps tools that accelerate your Software Delivery Life Cycle approach with IBM Cloud. They can be found here [Cloud-Native Toolkit Private Catalog Tiles](https://cloudnativetoolkit.dev/getting-started-day-0/install-toolkit/private-catalog)
 
-    | **Tile**      | **README**                                                       | 
-    |---------------|------------------------------------------------------------------|
+  | **Tile**      | **README**                                                       | 
+  |---------------|------------------------------------------------------------------|
     | `100`         |  [Create Resource Group Creation](tiles/create-resource-groups) |
     | `110`         |  [Access Groups and Access Policies Creation](tiles/create-access-group-policies)|
     | `120`         |  [Invite users to IBM Cloud Account](tiles/invite-users)    |
@@ -38,7 +38,7 @@ Follow the steps below to install the Enterprise tiles in your IBM Cloud Private
 
 **Note:** The following instructions depend on the `jq` command. please make sure you environment has this useful utility installed
 
-1. Download `create-catalog-offering.sh` from the <a href="https://github.com/ibm-gsi-ecosystem/ibm-enterprise-catalog-tiles/releases/latest" target="_blank">latest Enterprise tiles release</a> and make the file executable
+1. Download `create-catalog-offering.sh` from the <a href="https://github.com/ibm-gsi-ecosystem/ibm-enterprise-catalog-tiles/releases/latest" target="_blank">latest Enterprise tiles release</a> and make the file executable. Copy this script into your CLI.
     ```shell script
     LATEST_RELEASE=$(curl -sL https://api.github.com/repos/ibm-gsi-ecosystem/ibm-enterprise-catalog-tiles/releases/latest | jq -r '.tag_name')
     curl -OL "https://github.com/ibm-gsi-ecosystem/ibm-enterprise-catalog-tiles/releases/download/${LATEST_RELEASE}/create-enterprise-tiles.sh"
