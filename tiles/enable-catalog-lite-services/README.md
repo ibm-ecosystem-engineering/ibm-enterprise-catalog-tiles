@@ -1,3 +1,10 @@
-# IBM GSI Sandbox Private Catalog Tiles in IBM Cloud
+# Catalog with Lite Services
 
-## Run Tile - "Enterprise Lite Catalog"
+This tile will create a private catalog with just the Lite (free) plan services. 
+This enables an account administrator to manage and reduce catalog spend.
+
+## Private Catalog with Lite Service
+
+
+
+

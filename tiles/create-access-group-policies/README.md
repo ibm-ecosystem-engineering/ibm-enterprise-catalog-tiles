@@ -1,10 +1,11 @@
 # Access Groups and Access Policies Creation
-The objective of the tile is to create the Access Groups and Access Policies in IAM using terraform scripts.
 
+The objective of the tile is to create the Access Groups and Access Policies in IAM using terraform scripts.
 
 ## 1. Access Groups
 
-Following are the default values for access groups for GSI sandbox. However, users can provide access group names as per their requriement. 
+Following are the default values for access groups for GSI sandbox. However, users can provide access group names as per their requirement. 
+The convention being used is lower case for Resource Group names and Upper case for Access Group names so it is easier to read them. 
 
 #### Access Groups - Admins
 ```
