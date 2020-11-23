@@ -1,7 +1,7 @@
 //create all resource groups by taking input from user
 
 locals{
-  rgs = ["${split(",", var.resourceGroups)}"]
+  rgs = ["${split(",", var.resource_groups)}"]
 }
 
 resource "ibm_resource_group" "res_rg" {
