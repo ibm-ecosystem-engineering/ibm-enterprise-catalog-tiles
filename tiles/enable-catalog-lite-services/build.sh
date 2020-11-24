@@ -44,6 +44,7 @@ STAGES_DIRECTORY="terraform"
 
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/main.tf" "${WORKSPACE_DIR}"
+cp "${SRC_DIR}/${STAGES_DIRECTORY}/private_catalog.sh" "${WORKSPACE_DIR}"
 cp "${SCRIPT_DIR}/README.md" "${WORKSPACE_DIR}"
 
 echo "  - Creating offering - ${OUTPUT_DIR}/${OFFERING_NAME}.tar.gz"
