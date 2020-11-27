@@ -79,7 +79,7 @@
             {
               "key": "TF_VERSION",
               "type": "string",
-              "default_value": "0.11",
+              "default_value": "0.12",
               "description": "The version of terraform that should be used",
               "required": true,
               "hidden": false
