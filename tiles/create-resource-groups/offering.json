@@ -27,6 +27,14 @@
               "description": "The names of the resource groups to be created. Please provide list of resource group names separated with comma and no spaces in between.",
               "required": true,
               "hidden": false
+            },
+            {
+              "key": "TF_VERSION",
+              "type": "string",
+              "default_value": "0.12",
+              "description": "The version of terraform that should be used",
+              "required": true,
+              "hidden": false
             }
           ],
           "install": {
