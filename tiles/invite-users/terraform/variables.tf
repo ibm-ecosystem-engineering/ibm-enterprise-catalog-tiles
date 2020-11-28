@@ -1,3 +1,3 @@
-variable "users" {
- default = "abc@example.com,xyz@example.com"
+variable users {
+  default = "abc@example.com,xyz@example.com"
 }
