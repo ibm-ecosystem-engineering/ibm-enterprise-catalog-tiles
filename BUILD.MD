@@ -1,18 +1,31 @@
-# Terraform Package
+# IBM Cloud Reference Architecture
 
-This is a package of Terraform that can help you automate a number of stages in the IBM Cloud. 
+This reference architecture is a package of Terraform automation that can be configured and run in IBM Cloud. Read the instructions before configuring a schematics workspace.
 
-## Overview
+## {name}
 
-This is a package of terraform that can be run in the IBM Cloud Schematics service
+{short_desc}
 
-== Remember never place an API key or any senstive data in any of the terraform files
+{long_desc}
+
+The following diagram gives an overview of the IBM Cloud architecture topology and the components that will be configured by the Terraform automation.
+
+![Diagram}(./{diagram})
 
 ## Prepare Git Repo
 
-1. If you are reading this then the zip package has been unzipped and you are reading the `README.MD` file.
+The following steps will guide you through the creation of a Schematics Workspace in IBM Cloud, before you get started please read the important comment below about IBM Cloud API keys.
 
-2. Initial a Git Repository to store this package of Terraform within, follow instructions for `git init` etc.
+> #### Sensitive variable values
+>
+> - NEVER save API keys in `variables.tf` file
+> - NEVER push any API keys or senstive data to a git repository
+>
+>  *Use Terraform Environment Variables if locally testing* Read more [here](https://www.terraform.io/docs/language/values/variables.html#environment-variables)
+
+1. If you are reading README.MD file then you have received or download a package of terraform automation. Follow these instructions to provision this refernece archtiecture in IBM Cloud using the Schematics Terraform as a Service capability.
+
+2. Using your favourite Git source code management capabilility either in IBM Cloud or intInitial a Git Repository to store this package of Terraform within, follow instructions for `git init` etc.
 
 3. Push the Terraform into your repository
 
