@@ -38,4 +38,16 @@ git push
 4. Within the IBM Cloud Console create an IBM Cloud Schematics Workspace
 
 
+## Terraform Modules
+
+For more documentation on the specific features of the terraform modules included in this reference architecture use the referenced links below
+
+{modules}
+
 ## Summary
+
+For more information on IBM Cloud , IBM Schematics and Reference Architectures please reference these links below :
+
+
+- [IBM Cloud Documentations](https://cloud.ibm.com/docs)
+
