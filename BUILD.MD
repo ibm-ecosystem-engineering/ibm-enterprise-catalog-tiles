@@ -10,7 +10,7 @@ This reference architecture is a package of Terraform automation that can be con
 
 The following diagram gives an overview of the IBM Cloud architecture topology and the components that will be configured by the Terraform automation.
 
-![Diagram}(./{diagram})
+![Reference Diagram](./{diagram})
 
 ## Prepare Git Repo
 
